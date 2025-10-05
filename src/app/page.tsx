@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { Header } from "@/components/layouts/Header";
 import { Footer } from "@/components/layouts/Footer";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Zap, Shield, Palette } from "lucide-react";
 
 /**
  * Homepage (Server Component)
@@ -61,75 +63,51 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {/* Feature 1 */}
-              <div className="text-center p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    className="w-6 h-6 text-blue-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Lightning Fast</h3>
-                <p className="text-gray-600">
-                  Built with Next.js 15 and optimized for performance with
-                  server components.
-                </p>
-              </div>
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle>Lightning Fast</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Built with Next.js 15 and optimized for performance with
+                    server components.
+                  </p>
+                </CardContent>
+              </Card>
 
               {/* Feature 2 */}
-              <div className="text-center p-6 rounded-xl border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    className="w-6 h-6 text-purple-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Type-Safe</h3>
-                <p className="text-gray-600">
-                  Fully typed with TypeScript and validated environment
-                  variables.
-                </p>
-              </div>
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle>Type-Safe</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Fully typed with TypeScript and validated environment
+                    variables.
+                  </p>
+                </CardContent>
+              </Card>
 
               {/* Feature 3 */}
-              <div className="text-center p-6 rounded-xl border border-gray-200 hover:border-green-300 hover:shadow-lg transition-all">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    className="w-6 h-6 text-green-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Beautiful Design</h3>
-                <p className="text-gray-600">
-                  Modern UI with Tailwind CSS and accessible components.
-                </p>
-              </div>
+              <Card className="text-center hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Palette className="w-6 h-6 text-primary" />
+                  </div>
+                  <CardTitle>Beautiful Design</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Modern UI with shadcn/ui and accessible components.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
