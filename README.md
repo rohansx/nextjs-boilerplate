@@ -1,5 +1,4 @@
-# MyClone Frontend
-
+# NextJS boilerplate
 A modern, full-stack web application built with Next.js 15, React 19, TypeScript, and best practices for 2025.
 
 ---
